@@ -1,0 +1,48 @@
+<!--Variables-->
+
+{{ $image_1 := "/images/repair_installations.jpg" }}
+{{ $image_2 := "/images/gutters.jpg" }}
+{{ $image_3 := "/images/skylight.jpg" }}
+
+
+<!--Variables end-->
+
+<section class="service-sec box-shadow" style="background-image: url(/images/skyline.jpg); background-attachment: fixed;">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <!-- service of the page -->
+                <div class="service overlay">
+                    <img src="{{$image_1}}" alt="image description" class="img-responsive">
+                    <div class="over text-center">
+                        <h2 class="text-uppercase">{{.Get `service1`}}</h2>
+                        <p>{{.Get `service1_copy`}}</p>
+                        <a href="/get_started" class="read-more text-uppercase">{{.Get `learn`}}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <!-- service of the page -->
+                <div class="service overlay">
+                    <img src="{{$image_2}}" alt="image description" class="img-responsive">
+                    <div class="over text-center">
+                        <h2 class="text-uppercase">{{.Get `service2`}}</h2>
+                        <p>{{.Get `service2_copy`}}</p>
+                        <a href="/get_started" class="read-more text-uppercase">{{.Get `learn`}}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <!-- service of the page -->
+                <div class="service overlay">
+                    <img src="{{$image_3}}" alt="image description" class="img-responsive">
+                    <div class="over text-center">
+                        <h2 class="text-uppercase">{{.Get `service3`}}</h2>
+                        <p>{{.Get `service3_copy`}}</p>
+                        <a href="/get_started" class="read-more text-uppercase">{{.Get `learn`}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

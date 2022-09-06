@@ -1,0 +1,226 @@
+<!--Head Variables-->
+
+{{ $favicon := "/images/favicon.jpg" }}
+
+<!--Head Variables-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{ $title := site.Title }}
+                {{ if not .IsHome }}
+                    {{ $title = printf "%s | %s" .Title site.Title }}
+                {{ end }}
+        <title>{{ $title }}</title>
+		<link rel="shortcut icon" type="image/x-icon" href="{{$favicon}}">
+	<!-- include the site stylesheet -->
+	<link href="https://fonts.googleapis.com/css?family=Arizonia%7COpen+Sans:300,300i,400,400i,600,700,800%7CRoboto:300,400,500,700" rel="stylesheet">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="/css/font-awesome.css">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="/css/plugins.css">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="/css/icofont.css">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="/css/style.css">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="/css/colors.css">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+<!--Variables-->
+
+{{$name := "Your Company Name"}}
+{{ $hours := "Your Hours Go Here" }}
+{{ $contact := "Contact Us" }}
+{{ $logo := "Your Logo Goes Here" }}
+{{ $home := "Home" }}
+{{ $about := "About Us" }}
+{{ $services := "Services" }}
+	{{ $services_sub := "A sublist of your  valuable services" }}
+{{ $our_work := "Our Work" }}
+	{{ $our_work_sub := "Link pages to your best work"}}
+{{ $blog := "Blog" }}
+	{{$blog_sub := "Showcase your knowledge and Expertise"}}
+
+<!--Variables end-->
+
+
+    <div id="wrapper">
+        <!-- header of the page -->
+		<header id="header" class="style2">
+			<!-- header area of the page -->
+			<div class="header-area">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							<ul class="contact-list list-unstyled">
+								<li><i class="icon fa fa-clock-o"></i>{{$hours}}</li>
+							</ul>
+							<ul class="sign-up list-unstyled">
+								<li>{{$contact}}:</li>
+								<li><a href="tel:#"><i class="icon fa fa-phone"></i></a></li>
+								<li><a href="mailto:#"><i class="icon ti-email"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- header holder of the page -->
+			<div class="header-holder">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							<!-- logo of the page -->
+							<div class="logo">
+								<a href="/"><h1 style="color: white;">{{$logo}}</h1></a>
+							</div>
+							<a href="#" class="nav-opener text-center md-round"><i class="fa fa-bars"></i></a>
+							<!-- nav of the page -->
+							<nav id="nav">
+								<ul class="list-unstyled">
+									<li class="active">
+										<a href="/">{{$home}}</a>
+									</li>
+									<li><a href="/get_started">{{$about}}</a></li>
+									<li>
+										<a href="/get_started">{{$services}}</a>
+										<ul class="list-unstyled drop-down">
+											<li><a href="/get_started">{{$services_sub}}</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="/get_started">{{$our_work}}</a>
+										<ul class="list-unstyled drop-down">
+											<li><a href="/get_started">{{$our_work_sub}}</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="/get_started">{{$blog}}</a>
+										<ul class="list-unstyled drop-down">
+											<li><a href="/get_started">{{$blog_sub}}</a></li>
+										</ul>
+									</li>
+									<li><a href="/get_started">{{$contact}}</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+        <main id="main">
+            {{block "hero" .}}{{end}}
+            {{block "main" .}}{{end}}
+        </main>
+
+		<!--Variables-->
+
+		{{ $about_blurb := "Installing a roof is one of the most critical aspects of building a home. Homeowners want an aesthetically pleasing, durable roof that requires little maintenance. For this reason, a quality roof typically comes with a hefty price tag. We work hard to keep our business local and affordable." }}
+		{{$get_in_touch := "Get In Touch"}}
+			{{$address := "Your Address Goes Here"}}
+			{{$email := "Your Email Goes Here"}}
+			{{$phone := "Your Phone Number Goes Here"}}
+		{{ $hours_footer := "Hours of Operation" }}
+			{{ $support := "24 / 7 Support" }}
+			{{ $hours_weekday := "Your Weekday Hours" }}
+			{{ $hours_weekend := "Your Weekend Hours" }}
+		{{ $subscribe := "Learn More" }}
+			{{ $not_ready := "Not ready to make a move but want to learn more about our services? Subscribe below and learn more until you're ready for your new roof." }}
+
+		<!--Variables end-->
+
+
+        <!-- footer of the page -->
+		<footer id="footer">
+			<!-- footer holder of the page -->
+			<div class="footer-holder">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 col-md-3">
+							<h3 class="text-uppercase">{{$about}}</h3>
+							<p>{{$about_blurb}}</p>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-3">
+							<h3 class="text-uppercase">{{$get_in_touch}}</h3>
+							<!-- contact list of the page -->
+							<ul class="list-unstyled contact-list">
+								<li>
+									<span class="icon ti-location-pin"></span>
+									<address>{{$address}}</address>
+								</li>
+								<li>
+									<span class="icon ti-email"></span>
+									<a href="mailto:#">{{$email}}</a>
+								</li>
+								<li>
+									<span class="icon ti-headphone-alt"></span>
+									<a href="tel:#">{{$phone}}</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-3">
+							<h3 class="text-uppercase">{{$hours_footer}}</h3>
+							<!-- hour list of the page -->
+							<ul class="list-unstyled hour-list">
+								<li>{{$support}}</li>
+								<li>{{$hours_weekday}}</li>
+								<li>{{$hours_weekend}}</li>
+							</ul>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-3">
+							<h3 class="text-uppercase">{{$subscribe}}</h3>
+							<p>{{$not_ready}}</p>
+							<!-- subscribe form of the page -->
+							<form action="#" class="subscribe-form" method="post" name="subscribe-roofing-demo" data-netlify="true">
+								<fieldset>
+									<input type="email" class="form-control" placeholder="your email here">
+									<button type="submit"><i class="fa fa-paper-plane-o"></i></button>
+								</fieldset>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- footer area of the page -->
+			<div class="footer-area">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6">
+							<p>© {{$name}} {{ .Date.Format "2006" }} All Rights Reserved.</p>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<!-- socail network of the page -->
+							<ul class="socail-network list-unstyled">
+								<li><a href="/get_started" class="social_facebook"></a></li>
+								<li><a href="/get_started" class="social_linkedin"></a></li>
+								<li><a href="/get_started" class="social_twitter"></a></li>
+								<li><a href="/get_started" class="fa fa-google-plus"></a></li>
+								<li><a href="/get_started" class="social_pinterest"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- back top of the page -->
+		<span id="back-top" class="text-center md-round fa fa-caret-up"></span>
+		<!-- loader of the page -->
+		<div id="loader" class="loader-holder">
+	      <div class="block"><img src="/images/svg/hearts.svg" width="100" alt="loader"></div>
+	    </div>
+    </div>
+	<!-- include jQuery -->
+	<script src="/js/jquery.js"></script>
+	<!-- include jQuery -->
+	<script src="/js/plugins.js"></script>
+	<!-- include jQuery -->
+	<script src="/js/jquery.main.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!--Variables-->
+
+{{ $photo1 := "/images/photo1.jpg" }}
+{{ $photo3 := "/images/photo2.jpg" }}
+{{ $photo2 := "/images/photo3.jpg" }}
+
+<!--Variables-->
+
+<section class="choose-sec container pad-t">
+    <div class="row">
+        <div class="col-xs-12 text-center">
+            <h3 class="main-heading">{{.Get `why`}}</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <div class="img-holder">
+                <img src="{{$photo1}}" alt="image desciption" class="img-responsive">
+            </div>
+            <div class="img-holder">
+                <div class="img-col">
+                    <img src="{{$photo2}}" alt="image description" class="img-responsive">
+                </div>
+                <div class="img-col">
+                    <img src="{{$photo3}}" alt="image description" class="img-responsive">
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <ul class="list-unstyled choose-list">
+                <li>
+                    <span class="icon"><i class="fa fa-thumbs-o-up"></i></span>
+                    <div class="txt-holder">
+                        <h4 class="text-uppercase">{{.Get `reason_1`}}</h4>
+                        <p>{{.Get `reason_1_copy`}}</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon"><i class="fa fa-clock-o"></i></span>
+                    <div class="txt-holder">
+                        <h4 class="text-uppercase">{{.Get `reason_2`}}</h4>
+                        <p>{{.Get `reason_2_copy`}}</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon"><i class="fa fa-diamond"></i></span>
+                    <div class="txt-holder">
+                        <h4 class="text-uppercase">{{.Get `reason_3`}}</h4>
+                        <p>{{.Get `reason_3_copy`}}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>

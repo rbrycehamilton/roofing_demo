@@ -1,0 +1,70 @@
+{{ define "hero" }}
+<!--Variables-->
+
+{{ $professional := "Professional and Trustworthy" }}
+    {{ $no_stress := "Getting your new website" }}
+    {{ $no_stress2 := "shouldn't be stressful"}}
+    {{ $partnership := "We will be your partners every step of the way to ensure you get exactly"}}
+    {{ $partnership2 := "what your business needs at a price you'll love."}}
+    {{ $professional_buton := "Learn More"}}
+    {{ $professional_buton2 := "Contact Me"}}
+{{ $efficient := "Efficient" }}
+    {{ $vital := "We know how vital" }}
+    {{ $vital2 := "an efficient website is"}}
+    {{ $no_down := "We are dedicated to helping you transition to your new site"}}
+    {{ $no_down2 := "with virtually no downtime."}}
+    {{ $efficient_buton := "Learn More"}}
+    {{ $efficient_buton2 := "Contact Me"}}
+{{ $local := "Individual" }}
+    {{ $dedicated := "We are dedicated to" }}
+    {{ $dedicated2 := "serving your individual needs" }}
+    {{ $tools := "Our goal is to give you all the tools for success" }}
+    {{ $tools2 := "without the stress of setup and maintenance." }}
+    {{ $local_button := "Learn More" }}
+    {{ $local_button2 := "Contact Me" }}
+
+<!--Variables end-->
+
+<section class="main-slider slider2">
+    <!-- slide of the page -->
+    <div class="slide bg-full overlay" style="background-image: url(/images/slider-1.jpg);">
+        <div class="caption text-center">
+            <span class="title text-uppercase">{{$professional}}</span>
+            <h1 class="text-uppercase">{{$no_stress}}<br>{{$no_stress2}}</h1>
+            <p>{{$partnership}} <br>{{$partnership2}}</p>
+            <div class="btn-holder">
+                <a href="/get_started" class="btn active text-center text-uppercase">{{$professional_buton}}</a>
+                <a href="/get_started" class="btn text-center text-uppercase">{{$professional_buton2}}</a>
+            </div>
+        </div>
+    </div>
+    <!-- slide of the page -->
+    <div class="slide bg-full overlay" style="background-image: url(/images/slider-2.jpg);">
+        <div class="caption text-center">
+            <span class="title text-uppercase">{{$efficient}}</span>
+            <h1 class="text-uppercase">{{$vital}} <br>{{$vital2}}</h1>
+            <p>{{$no_down}} <br>{{$no_down2}}</p>
+            <div class="btn-holder">
+                <a href="/get_started" class="btn active text-center text-uppercase">{{$efficient_buton}}</a>
+                <a href="/get_started" class="btn text-center text-uppercase">{{$efficient_buton2}}</a>
+            </div>
+        </div>
+    </div>
+    <!-- slide of the page -->
+    <div class="slide bg-full overlay" style="background-image: url(/images/slider-3.jpg);">
+        <div class="caption text-center">
+            <span class="title text-uppercase">{{$local}}</span>
+            <h1 class="text-uppercase">{{$dedicated}}<br>{{$dedicated2}}</h1>
+            <p>{{$tools}}<br>{{$tools2}}</p>
+            <div class="btn-holder">
+                <a href="/get_started" class="btn active text-center text-uppercase">{{$local_button}}</a>
+                <a href="/get_started" class="btn text-center text-uppercase">{{$local_button2}}</a>
+            </div>
+        </div>
+    </div>
+</section>
+{{end}}
+
+{{ define "main" }}
+    {{ .Content }}
+{{end}}

@@ -1,0 +1,15 @@
+<!--Variables-->
+
+{{ $banner := "/images/roof_banner.jpg" }}
+
+<!--Variables end-->
+
+<section class="banner bg-parallax overlay" style="background-image: url({{$banner}});">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <h1 class="main-heading3 text-uppercase">{{.Get `contact`}}<br><br><span>{{.Get `contact_2`}}</span></h1>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,80 @@
+<!--Variables-->
+
+{{ $image1 := "/images/blog1.jpg" }}
+{{ $image2 := "/images/blog2.jpg" }}
+{{ $image3 := "/images/blog3.jpg" }}
+
+<!--Variables-->
+
+<section class="blog-sec container pad-t">
+    <div class="row">
+        <div class="col-xs-12 text-center">
+            <h3 class="main-heading text-uppercase">{{.Get `section_title`}}</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-4">
+            <!-- blog of the page -->
+            <div class="blog">
+                <div class="img-holder">
+                    <img src="{{$image1}}" alt="image description" class="img-responsive">
+                    <div class="over">
+                        <a href="/get_started"><span></span></a>
+                    </div>
+                </div>
+                <div class="txt-holder">
+                    <h3 class="text-uppercase"><a href="/get_started">{{.Get `blog_title`}}</a></h3>
+                    <ul class="list-unstyled comment-nav">
+                        <li><time datetime="2017-02-03 20:00">{{.Get `blog_date`}}</time></li>
+                        <li>|</li>
+                        <li><a href="/get_started">{{.Get `blog_category`}}</a></li>
+                    </ul>
+                    <p>{{.Get `blog_truncate`}}</p>
+                    <a href="/get_started" class="read-more text-uppercase">{{.Get `read`}}</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <!-- blog of the page -->
+            <div class="blog">
+                <div class="img-holder">
+                    <img src="{{$image2}}" alt="image description" class="img-responsive">
+                    <div class="over">
+                        <a href="/get_started"><span></span></a>
+                    </div>
+                </div>
+                <div class="txt-holder">
+                    <h3 class="text-uppercase"><a href="/get_started">{{.Get `blog_title2`}}</a></h3>
+                    <ul class="list-unstyled comment-nav">
+                        <li><time datetime="2017-02-03 20:00">{{.Get `blog_date`}}</time></li>
+                        <li>|</li>
+                        <li><a href="/get_started">{{.Get `blog_category`}}</a></li>
+                    </ul>
+                    <p>{{.Get `blog_truncate`}}</p>
+                    <a href="/get_started" class="read-more text-uppercase">{{.Get `read`}}</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <!-- blog of the page -->
+            <div class="blog">
+                <div class="img-holder">
+                    <img src="{{$image3}}" alt="image description" class="img-responsive">
+                    <div class="over">
+                        <a href="/get_started"><span></span></a>
+                    </div>
+                </div>
+                <div class="txt-holder">
+                    <h3 class="text-uppercase"><a href="/get_started">{{.Get `blog_title3`}}</a></h3>
+                    <ul class="list-unstyled comment-nav">
+                        <li><time datetime="2017-02-03 20:00">{{.Get `blog_date`}}</time></li>
+                        <li>|</li>
+                        <li><a href="/get_started">{{.Get `blog_category`}}</a></li>
+                    </ul>
+                    <p>{{.Get `blog_truncate`}}</p>
+                    <a href="/get_started" class="read-more text-uppercase">{{.Get `read`}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

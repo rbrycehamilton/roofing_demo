@@ -1,0 +1,44 @@
+<!--Variables-->
+
+{{$background_image := "/images/background_slider.jpg"}}
+{{$customer1 := "/images/customer1.jpg"}}
+{{$customer2 := "/images/customer2.jpg"}}
+{{$customer3 := "/images/customer3.jpg"}}
+
+<!--Variables-->
+
+<div class="testimonail-sec style2 bg-full overlay" style="background-image: url({{$background_image}});">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <!-- testimonail slider of the page -->
+                <div class="testimonail-slider">
+                    <!-- slide of the page -->
+                    <blockquote class="slide text-center">
+                        <div class="img-holder round">
+                            <img src="{{$customer1}}" alt="image description" class="img-responsive">
+                        </div>
+                        <q>“ {{.Get `quote1`}} “</q>
+                        <cite>- {{.Get `cite1`}}. <span>{{.Get `role1`}}</span> -</cite>
+                    </blockquote>
+                    <!-- slide of the page -->
+                    <blockquote class="slide text-center">
+                        <div class="img-holder round">
+                            <img src="{{$customer2}}" alt="image description" class="img-responsive">
+                        </div>
+                        <q>“{{.Get `quote2`}}! “</q>
+                        <cite>- {{.Get `cite2`}}. <span>{{.Get `role2`}}</span> -</cite>
+                    </blockquote>
+                    <!-- slide of the page -->
+                    <blockquote class="slide text-center">
+                        <div class="img-holder round">
+                            <img src="{{$customer3}}" alt="image description" class="img-responsive">
+                        </div>
+                        <q>“ {{.Get `quote3`}} “</q>
+                        <cite>- {{.Get `cite3`}}. <span>{{.Get `role3`}}</span> -</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
